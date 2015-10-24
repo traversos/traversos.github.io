@@ -12,11 +12,7 @@
 
 // Base Styles ——————————————————————————————— •
 html {
-  background: url('') no-repeat center center fixed #4a3337;
-  -webkit-background-size: cover;
-     -moz-background-size: cover;
-       -o-background-size: cover;
-          background-size: cover;
+  background: #4a3337;
 }
 
 body {
@@ -42,6 +38,7 @@ a {
 .header {
   padding: 2rem 4rem 1rem;
   background: #f4b659;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 
 .logo {
@@ -63,6 +60,10 @@ a {
 .site-nav__item {
   display: inline-block;
   margin: 0 0.5rem;
+}
+
+.site-nav__item a {
+  text-decoration: none;
 }
 
 h1 {
@@ -101,6 +102,12 @@ main {
   background: white;
   padding: 3rem 4rem 4rem;
   text-align: left;
+  background: #f5efe6;
+}
+
+.page-content {
+  max-width: 42em;
+  margin: 0 auto;
 }
 
 .site-footer {

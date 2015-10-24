@@ -1,0 +1,123 @@
+// Typography ———————————————————————————————— •
+$font-sans: servus-slab, Georgia, 'Times New Roman', serif;
+
+@mixin font-smoothing($attr) {
+  -webkit-font-smoothing: $attr;
+          font-smoothing: $attr;
+}
+
+// Colors ———————————————————————————————————— •
+$color-background: #ffff;
+$color-link: #4a3337;
+$color-link-hover: #4a3337;
+$color-link-visited: #4a3337;
+$color-text: #4a3337;
+$color-spot: #FF548F;
+
+
+// Effects ——————————————————————————————————— •
+@mixin animate($args...) {
+  -webkit-animation: $args;
+     -moz-animation: $args;
+      -ms-animation: $args;
+       -o-animation: $args;
+          animation: $args;
+}
+
+@mixin backface-visibility {
+  -webkit-backface-visibility: hidden;
+     -moz-backface-visibility: hidden;
+      -ms-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+@mixin border-box {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+@mixin border-radius($amount) {
+  -webkit-border-radius: $amount;
+     -moz-border-radius: $amount;
+       -o-border-radius: $amount;
+          border-radius: $amount;
+}
+
+@mixin box-shadow($attrs) {
+  -webkit-box-shadow: $attrs;
+     -moz-box-shadow: $attrs;
+       -o-box-shadow: $attrs;
+          box-shadow: $attrs;
+}
+
+@mixin opacity($amount) {
+  -webkit-opacity: $amount;
+     -moz-opacity: $amount;
+       -o-opacity: $amount;
+          opacity: $amount;
+}
+
+@mixin transform($attrs) {
+  -webkit-transform: $attrs;
+     -moz-transform: $attrs;
+      -ms-transform: $attrs;
+          transform: $attrs;
+}
+
+@mixin transition($attrs) {
+  -webkit-transition: $attrs;
+     -moz-transition: $attrs;
+      -ms-transition: $attrs;
+          transition: $attrs;
+}
+
+@mixin transition-delay($delay) {
+  -webkit-transition-delay: $delay;
+     -moz-transition-delay: $delay;
+      -ms-transition-delay: $delay;
+          transition-delay: $delay;
+}
+
+@mixin transform-origin($args) {
+  -webkit-transform-origin: $args;
+     -moz-transform-origin: $args;
+      -ms-transform-origin: $args;
+       -o-transform-origin: $args;
+          transform-origin: $args;
+}
+
+
+// Development ——————————————————————————————— •
+@mixin debug { background: #FFFFEE; outline: 1px solid red !important; }
+@mixin hide { display: none; }
+@mixin unsized { img:not([width]):not([height]) { outline: 2px solid red !important; } }
+
+
+// Hacks ————————————————————————————————————— •
+@mixin clearfix {
+  &:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+  }
+  zoom: 1;
+}
+
+
+// Responsive ———————————————————————————————— •
+@mixin media($query) {
+  @if $query == small {
+    @media (max-width: 767px) { @content; }
+  } @else if $query == medium {
+    @media (min-width: 768px) { @content; }
+  } @else if $query == large {
+    @media (min-width: 992px) { @content; }
+  } @else if $query == x-large {
+    @media (min-width: 1600px) { @content; }
+  } @else {
+    @media (#{$query}) { @content; }
+  }
+}

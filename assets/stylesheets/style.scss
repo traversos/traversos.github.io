@@ -1,0 +1,191 @@
+---
+---
+
+// Reset & Mixins ———————————————————————————— •
+@charset "UTF-8";
+
+@import
+  'globals/mixins',
+  'globals/buttons',
+  'globals/reset';
+
+
+// Base Styles ——————————————————————————————— •
+html {
+  background: url('') no-repeat center center fixed #4a3337;
+  -webkit-background-size: cover;
+     -moz-background-size: cover;
+       -o-background-size: cover;
+          background-size: cover;
+}
+
+body {
+  @include border-box;
+  @include font-smoothing(antialiased);
+  color: $color-text;
+  font-family: $font-sans;
+  font-size: 1.4rem;
+  line-height: 1.4;
+  position: relative;
+  font-weight: 400;
+  letter-spacing: -0.5px;
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+a {
+  color: $color-link;
+  &:hover { color: $color-link-hover; }
+  &:active { color: $color-text; }
+}
+
+.header {
+  padding: 2rem 4rem 1rem;
+  background: #f4b659;
+}
+
+.logo {
+  max-width: 200px;
+  margin: 0 auto;
+
+  img { width: 100%; }
+}
+
+.site-nav {
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav-items {
+  margin: 0;
+}
+
+.site-nav__item {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+h1 {
+  font: 1.9rem/1.2 $font-sans;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: bold;
+}
+
+h2 {
+  font: 1.4rem/1.2 $font-sans;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+hr {
+  border-top: 4px double #ccc;
+  height: 0;
+  margin: 3rem -1rem 3rem;
+  clear: left;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+ul, ol {
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+main {
+  @include border-box;
+  @include clearfix;
+  display: block;
+  background: white;
+  padding: 3rem 4rem 4rem;
+  text-align: left;
+}
+
+.site-footer {
+  position: relative;
+  display: block;
+  padding: 1.5rem 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.copyright {
+  font-size: 1rem;
+  margin-top: .3rem;
+  color: black;
+}
+
+// UTLITY CLASSES
+.cta {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.centered {
+  text-align: center;
+}
+
+.loadable:not(.loading) .busy {
+  display: none;
+}
+
+.busy {
+  font-weight: bold;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.page-image {
+  margin-bottom: 2rem;
+  text-align: center;
+
+  img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.page-image__caption {
+  font-size: 1.1rem;
+}
+
+// CONTACT PAGE
+.contact {
+  label {
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+  }
+
+  input[type=text],
+  input[type=email],
+  textarea {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: $font-sans;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    border: 3px solid #ccc;
+    border-radius: .3rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    -webkit-appearance: none;
+    outline: none;
+    resize: none;
+  }
+}
+
+
+
+// iOS Font Sizing —————————————————————— •
+@media screen and (max-device-width: 480px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+  }
+}

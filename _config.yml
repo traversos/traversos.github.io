@@ -1,0 +1,14 @@
+title: Traverso’s Restaurant
+description: "DESCRIPTION"
+url: "http://traversosrestaurant.com"
+
+destination: public
+exclude: [public, Rakefile, README.md]
+
+permalink: /writing/:title/
+markdown: kramdown
+highlighter: pygments
+
+sass:
+  style:    :compressed
+  sass_dir: assets/stylesheets

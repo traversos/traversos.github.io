@@ -1,0 +1,41 @@
+.cta-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem 0.75rem;
+  margin-bottom: .5rem;
+  font-family: $font-sans;
+  font-size: 1.4rem;
+  background: $color-link;
+  color: white;
+  text-decoration: none;
+  border: none;
+  border-bottom: 4px solid rgba(0,0,0,.3);
+  outline: none;
+  -webkit-appearance: none;
+  @include border-radius(5px);
+
+  &:hover {
+    color: white;
+  }
+}
+
+.cta-button--facebook {
+  background: #435f9c;
+}
+
+.cta-button--back-up {
+  font-size: 1.2rem;
+  background: #666;
+}
+
+.cta-button--add-event {
+  font-size: 1rem;
+  padding: .5rem 1rem;
+  margin-top: .5rem;
+  background: lightslategrey;
+  border-bottom-width: 3px;
+}
+
+.facebook-button {
+  @include border-box;
+  text-align: center;
+}

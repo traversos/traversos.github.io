@@ -36,9 +36,14 @@ a {
 }
 
 .header {
-  padding: 2rem 4rem 1rem;
-  background: #f4b659;
-  border-bottom: 1px solid rgba(0,0,0,0.1);
+  @include clearfix;
+  padding: 1rem 2rem;
+  background: #fdd598;
+  border-bottom: 5px solid rgba(0,0,0,0.05);
+
+  @include media(large) {
+    padding: 2rem 6rem 1rem;
+  }
 }
 
 .logo {
@@ -46,11 +51,20 @@ a {
   margin: 0 auto;
 
   img { width: 100%; }
+
+  @include media(large) {
+    float: left;
+  }
 }
 
 .site-nav {
   margin: 0;
   padding: 0;
+
+  @include media(large) {
+    float: right;
+    margin-top: 1rem;
+  }
 }
 
 .site-nav-items {
@@ -60,6 +74,10 @@ a {
 .site-nav__item {
   display: inline-block;
   margin: 0 0.5rem;
+
+  @include media(medium) {
+    margin: 0 1rem;
+  }
 }
 
 .site-nav__item a {
@@ -69,7 +87,6 @@ a {
 h1 {
   font: 1.9rem/1.2 $font-sans;
   margin-bottom: 2rem;
-  text-align: center;
   font-weight: bold;
 }
 
@@ -100,7 +117,7 @@ main {
   @include clearfix;
   display: block;
   background: white;
-  padding: 3rem 4rem 4rem;
+  padding: 3rem 1rem;
   text-align: left;
   background: #f5efe6;
 }
@@ -121,7 +138,7 @@ main {
 .copyright {
   font-size: 1rem;
   margin-top: .3rem;
-  color: black;
+  color: white;
 }
 
 // UTLITY CLASSES

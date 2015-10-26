@@ -2,6 +2,11 @@
 
   <body>
     {% include home/header.html %}
+
+    <main class="home" role="main">
+      {{ content }}
+    </main>
+
     <div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
@@ -10,10 +15,6 @@
       js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.4&appId=418543894904906";
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
-
-    <main class="home" role="main">
-      {{ content }}
-    </main>
 
     {% include home/footer.html %}
     {% include components/analytics.html %}

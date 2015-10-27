@@ -20,8 +20,8 @@ body {
   @include font-smoothing(antialiased);
   color: $color-text;
   font-family: $font-sans;
-  font-size: 1.4rem;
-  line-height: 1.4;
+  font-size: 1.3rem;
+  line-height: 1.5;
   position: relative;
   font-weight: 400;
   letter-spacing: -0.5px;
@@ -42,7 +42,7 @@ a {
   border-bottom: 5px solid rgba(0,0,0,0.05);
 
   @include media(large) {
-    padding: 2rem 6rem 1rem;
+    padding: 2rem 4rem 1rem;
   }
 }
 
@@ -73,7 +73,7 @@ a {
 
 .site-nav__item {
   display: inline-block;
-  margin: 0 0.5rem;
+  margin: 0 0 0 0.5rem;
 
   @include media(medium) {
     margin: 0 1rem;
@@ -97,9 +97,9 @@ h2 {
 }
 
 hr {
-  border-top: 4px double #ccc;
+  border-top: 4px double rgba(0,0,0,0.2);
   height: 0;
-  margin: 3rem -1rem 3rem;
+  margin: 2rem -1rem;
   clear: left;
 }
 
@@ -112,19 +112,32 @@ ul, ol {
   margin-bottom: 1.6rem;
 }
 
+.flush {
+  margin: 0;
+}
+
+.push-half__bottom {
+  margin-bottom: 0.4rem !important;
+}
+
+.byline {
+  font: 1.2rem/1.3 $font-sans;
+}
+
 main {
   @include border-box;
   @include clearfix;
   display: block;
   background: white;
-  padding: 3rem 1rem;
+  padding: 2rem 1rem;
   text-align: left;
-  background: #f5efe6;
+  background: #f8f3ec;
 }
 
 .page-content {
-  max-width: 42em;
-  margin: 0 auto;
+  @include media(large) {
+    padding: 1rem 4rem 1rem;
+  }
 }
 
 .site-footer {
@@ -175,6 +188,27 @@ main {
 .page-image__caption {
   font-size: 1.1rem;
 }
+
+// HOME
+.main-column,
+.right-column {
+  @include media(large) {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.main-column {
+  @include media(large) {
+    width: 70%;
+    padding-right: 5rem;
+  }
+}
+
+.home-hours {
+  list-style-type: none;
+}
+
 
 // CONTACT PAGE
 .contact {

@@ -12,7 +12,7 @@
 
 // Base Styles ——————————————————————————————— •
 html {
-  background: #4a3337;
+  background: $color-text;
 }
 
 body {
@@ -37,23 +37,37 @@ a {
 
 .header {
   @include clearfix;
-  padding: 1rem 2rem;
-  background: #fdd598;
-  border-bottom: 5px solid rgba(0,0,0,0.05);
-
-  @include media(large) {
-    padding: 2rem 4rem 1rem;
-  }
+  padding: 1.5rem 0;
+  background: $color-text;
+  border-bottom: 10px solid #fdd598;
 }
 
 .logo {
-  max-width: 200px;
+  max-width: 240px;
   margin: 0 auto;
 
   img { width: 100%; }
 
+  figcaption {
+    display: none;
+    color: $color-white-text;
+    text-transform: uppercase;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 0.8rem;
+    margin-top: -1.5rem;
+    padding: 0 2.5rem;
+    text-align: center;
+    line-height: 1;
+
+    @include media(large) {
+      display: block;
+    }
+  }
+
   @include media(large) {
-    float: left;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
@@ -62,26 +76,58 @@ a {
   padding: 0;
 
   @include media(large) {
-    float: right;
-    margin-top: 1rem;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
 
 .site-nav-items {
   margin: 0;
+  padding: 0;
 }
 
 .site-nav__item {
   display: inline-block;
-  margin: 0 0 0 0.5rem;
+  line-height: 1.3;
+  margin: 0;
+  border-bottom: 1px solid transparent;
+
+  &:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+
+  &.active,
+  &:hover {
+    border-color: $color-white-text;
+  }
 
   @include media(medium) {
-    margin: 0 1rem;
+    margin: 0 2.5rem;
   }
-}
 
-.site-nav__item a {
-  text-decoration: none;
+  span {
+    display: block;
+    font-size: 1rem;
+    font-style: italic;
+    color: $color-white-text;
+
+    @include media(small) {
+      display: none;
+    }
+  }
+
+  a {
+    color: $color-white-text;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+
+    @include media(medium) {
+      font-size: 1.2rem;
+    }
+  }
 }
 
 h1 {
@@ -131,7 +177,7 @@ main {
   background: white;
   padding: 2rem 1rem;
   text-align: left;
-  background: #f8f3ec;
+  background: $color-background;
 }
 
 .page-content {

@@ -2,14 +2,27 @@
 
 <header class="header">
   <figure class="logo">
-    <a href="/"><img src="/assets/images/logo.svg"></a>
+    <a href="/"><img src="/assets/images/logo.svg" alt="Traverso’s"></a>
+    <figcaption>Italian Restaurant Lounge &amp; Pizzeria</figcaption>
   </figure>
   <nav class="site-nav">
     <ul class="site-nav-items">
-      <li class="site-nav__item {% if active[1] == 'menu'    %}'active'{% endif %}"><a href="/menu/">Our Menu</a></li>
-      <li class="site-nav__item {% if active[1] == 'catering' %}'active'{% endif %}"><a href="/catering/">Catering &amp; Parties</a></li>
-      <li class="site-nav__item {% if active[1] == 'contact' %}'active'{% endif %}"><a href="/contact/">Contact</a></li>
-      <li class="site-nav__item {% if active[1] == 'about'   %}'active'{% endif %}"><a href="/about/">About</a></li>
+      <li class="site-nav__item {% if active[1] == 'menu' %} active {% endif %}">
+        <span>Browse</span>
+        <a href="/menu/">Our Menu</a>
+      </li>
+      <li class="site-nav__item {% if active[1] == 'catering' %} active {% endif %}">
+        <span>Plan or book</span>
+        <a href="/catering/">Catering &amp; Parties</a>
+      </li>
+      <li class="site-nav__item {% if active[1] == 'contact' %} active {% endif %}">
+        <span>Call or visit</span>
+        <a href="/contact/">Contact</a>
+      </li>
+      <li class="site-nav__item {% if active[1] == 'about' %} active {% endif %}">
+        <span>Our story</span>
+        <a href="/about/">About</a>
+      </li>
     </ul>
   </nav>
 </header>

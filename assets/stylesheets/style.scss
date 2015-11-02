@@ -38,8 +38,7 @@ a {
 .header {
   @include clearfix;
   padding: 1.5rem 0;
-  background: $color-text;
-  border-bottom: 10px solid #fdd598;
+  border-bottom: 0px solid #548e76;
 }
 
 .logo {
@@ -137,9 +136,21 @@ h1 {
 }
 
 h2 {
-  font: 1.4rem/1.2 $font-sans;
-  margin-bottom: 0.5rem;
+  font: 1.6rem/1.2 $font-sans;
+  margin-bottom: 1rem;
   font-weight: bold;
+}
+
+h3 {
+  font: 1.3rem/1.2 $font-sans;
+  color: brown;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-size: 1.1rem;
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  text-transform: uppercase;
 }
 
 hr {
@@ -174,7 +185,6 @@ main {
   @include border-box;
   @include clearfix;
   display: block;
-  background: white;
   padding: 2rem 1rem;
   text-align: left;
   background: $color-background;

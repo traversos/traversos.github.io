@@ -3,32 +3,34 @@ title: "Contact | Traverso’s Restaurant"
 layout: home
 ---
 <section class="page-content contact">
-  <header>
-    <h1>Title</h1>
+  <header class="centered">
+    <h1>Need to make a reservation, order carryout or delivery, or book a party or event?</h1>
   </header>
   <article>
-    <p>
-      Body text
+    <p class="centered">
+      Email us at [EMAIL] or give us a call at <strong>(630) 305-7747</strong>. You can also use the form below to send us a message, and we’ll get back to you soon.</p>
     </p>
-
-    <form action="//formspree.io/hello@traversosrestaurant.com" method="POST">
-      <input type="hidden" name="_next" value="//traversosrestaurant.com/contact/thanks.html" />
-      <div>
-        <label><strong>Your name:</strong></label>
-        <input type="text" name="name" placeholder="Type your name...">
-      </div>
-      <div>
-        <label><strong>Your email address:</strong></label>
-        <input type="email" name="_replyto" placeholder="you@youremail.com...">
-      </div>
-      <div>
-        <label><strong>What can we help you with?</strong></label>
-        <textarea rows="8" name="message" placeholder="Type your message here..."></textarea>
-      </div>
-      <div>
-        <input type="submit" value="Send your message" class="cta-button">
-      </div>
-    </form>
+    <hr>
+    <div class="contact__form">
+      <form action="//formspree.io/hello@traversosrestaurant.com" method="POST">
+        <input type="hidden" name="_next" value="//traversosrestaurant.com/contact/thanks.html" />
+        <div>
+          <label><strong>Your name:</strong></label>
+          <input type="text" name="name" placeholder="Type your name...">
+        </div>
+        <div>
+          <label><strong>Your email address:</strong></label>
+          <input type="email" name="_replyto" placeholder="you@youremail.com...">
+        </div>
+        <div>
+          <label><strong>What can we help you with?</strong></label>
+          <textarea rows="8" name="message" placeholder="Type your message here..."></textarea>
+        </div>
+        <div>
+          <input type="submit" value="Send your message" class="cta-button">
+        </div>
+      </form>
+    </div>
   </article>
 </section>
 

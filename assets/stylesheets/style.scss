@@ -318,6 +318,9 @@ main {
 
 // CONTACT PAGE
 .contact {
+  max-width: 50rem;
+  margin: 0 auto;
+
   label {
     display: block;
     font-size: 1.4rem;
@@ -331,10 +334,10 @@ main {
     display: block;
     width: 100%;
     box-sizing: border-box;
-    font-family: $font-sans;
+    font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-size: 1.4rem;
     line-height: 1.4;
-    border: 3px solid #ccc;
+    border: 3px solid rgba(0,0,0,0.2);
     border-radius: .3rem;
     padding: 1rem;
     margin-bottom: 1rem;
@@ -342,6 +345,10 @@ main {
     outline: none;
     resize: none;
   }
+}
+
+.contact__form {
+  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
 }
 
 

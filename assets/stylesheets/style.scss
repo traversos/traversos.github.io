@@ -320,6 +320,15 @@ main {
   }
 }
 
+.menu__item--table {
+  width: 100%;
+
+  p {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+}
+
 .menu__callout {
   border: 1px solid brown;
   padding: 1rem;

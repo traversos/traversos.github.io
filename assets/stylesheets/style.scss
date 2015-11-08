@@ -55,6 +55,8 @@ a {
     max-width: 200px;
   }
 
+  a { text-decoration: none; }
+
   figcaption {
     display: none;
     color: $color-white-text;
@@ -112,28 +114,29 @@ a {
     margin: 0 2.5rem;
   }
 
-  span {
-    display: block;
-    font-size: 1rem;
-    font-style: italic;
-    color: $color-white-text;
+  a { text-decoration: none; }
+}
 
-    @include media(small) {
-      display: none;
-    }
+.site-nav-link__secondary {
+  display: block;
+  font-size: 1rem;
+  font-style: italic;
+  color: $color-white-text;
+
+  @include media(small) {
+    display: none;
   }
+}
 
-  a {
-    color: $color-white-text;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-family: $font-sans;
-    font-weight: bold;
-    font-size: 1rem;
+.site-nav-link__primary {
+  color: $color-white-text;
+  text-transform: uppercase;
+  font-family: $font-sans;
+  font-weight: bold;
+  font-size: 1rem;
 
-    @include media(medium) {
-      font-size: 1.2rem;
-    }
+  @include media(medium) {
+    font-size: 1.2rem;
   }
 }
 
@@ -163,6 +166,7 @@ h3 {
 
 h4 {
   font: 1.1rem/1.2 $font-sans;
+  font-weight: bold;
   text-transform: uppercase;
 }
 

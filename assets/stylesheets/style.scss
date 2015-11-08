@@ -190,7 +190,11 @@ ul, ol {
   margin: 0;
 }
 
-.push-half__bottom {
+.flush--bottom {
+  margin-bottom: 0;
+}
+
+.push-half--bottom {
   margin-bottom: 0.4rem !important;
 }
 

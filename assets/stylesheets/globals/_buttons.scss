@@ -1,14 +1,13 @@
 .cta-button {
   display: inline-block;
   padding: 0.75rem 1.5rem 0.75rem;
-  margin-bottom: .5rem;
-  font-family: -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
-  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  font: 1.3rem / 1.2 $font-sans;
   background: #548e76;
   color: white;
   text-decoration: none;
-  border: none;
-  border-bottom: 4px solid rgba(0,0,0,.3);
+  border: 0;
+  border-bottom: 4px solid rgba(0,0,0,0.3);
   outline: none;
   -webkit-appearance: none;
   @include border-radius(5px);
@@ -19,24 +18,19 @@
 }
 
 .cta-button--facebook {
-  background: #435f9c;
+  max-width: 180px;
+  border: 1px solid rgba(0,0,0,0.2);
+  border-bottom-width: 3px;
+  background: #fff;
+  padding-bottom: 0.4rem;
+
+  img { width: 100%; }
+
+  &:hover {
+    border-color: rgba(0,0,0,0.4);
+  }
 }
 
 .cta-button--back-up {
-  color: $color-text;
-  font-size: 1.2rem;
-  background: #fdd598;
-}
 
-.cta-button--add-event {
-  font-size: 1rem;
-  padding: .5rem 1rem;
-  margin-top: .5rem;
-  background: lightslategrey;
-  border-bottom-width: 3px;
-}
-
-.facebook-button {
-  @include border-box;
-  text-align: center;
 }

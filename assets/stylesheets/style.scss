@@ -25,7 +25,6 @@ body {
   position: relative;
   font-weight: 400;
   letter-spacing: -0.5px;
-  margin-bottom: 4rem;
   text-align: center;
 
   @include media(small) {
@@ -39,6 +38,59 @@ a {
   &:active { color: $color-text; }
 }
 
+h1 {
+  font: 1.9rem/1.2 $font-serif;
+  margin-bottom: 2rem;
+  font-weight: bold;
+
+  @include media(small) {
+    font-size: 1.7rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  font-weight: bold;
+
+  @include media(small) {
+    font-size: 1.5rem;
+  }
+}
+
+h3 {
+  font-size: 1.3rem;
+  line-height: 1.2;
+  color: brown;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font: 1.1rem/1.2 $font-sans;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+hr {
+  border-top: 4px double rgba(0,0,0,0.2);
+  height: 0;
+  margin: 2rem -1rem;
+  clear: left;
+}
+
+p {
+  margin-bottom: 1.6rem;
+}
+
+ul, ol {
+  padding-left: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+// SITE LAYOUT
 .header {
   @include clearfix;
   padding: 1.5rem 0;
@@ -140,62 +192,16 @@ a {
   }
 }
 
-h1 {
-  font: 1.9rem/1.2 $font-serif;
-  margin-bottom: 2rem;
-  font-weight: bold;
-
+.site-nav-events__big {
   @include media(small) {
-    text-align: center;
+    display: none;
   }
 }
 
-h2 {
-  font-size: 1.6rem;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 1.3rem;
-  line-height: 1.2;
-  color: brown;
-  margin-bottom: 1rem;
-}
-
-h4 {
-  font: 1.1rem/1.2 $font-sans;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-hr {
-  border-top: 4px double rgba(0,0,0,0.2);
-  height: 0;
-  margin: 2rem -1rem;
-  clear: left;
-}
-
-p {
-  margin-bottom: 1.6rem;
-}
-
-ul, ol {
-  padding-left: 1.6rem;
-  margin-bottom: 1.6rem;
-}
-
-.flush {
-  margin: 0;
-}
-
-.flush--bottom {
-  margin-bottom: 0;
-}
-
-.push-half--bottom {
-  margin-bottom: 0.4rem !important;
+.site-nav-events__small {
+  @include media(medium) {
+    display: none;
+  }
 }
 
 .byline {
@@ -221,50 +227,32 @@ main {
 .site-footer {
   position: relative;
   display: block;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
   margin: 0 auto;
   text-align: center;
 }
 
 .copyright {
-  font-size: 1rem;
-  margin-top: .3rem;
+  font: 1rem / 1.2 $font-sans;
+  margin: 0.75rem 0 0;
   color: white;
 }
 
 // UTLITY CLASSES
-.cta {
-  text-align: center;
-  margin: 2rem 0;
+.flush {
+  margin: 0;
+}
+
+.flush--bottom {
+  margin-bottom: 0;
+}
+
+.push-half--bottom {
+  margin-bottom: 0.4rem !important;
 }
 
 .centered {
   text-align: center;
-}
-
-.loadable:not(.loading) .busy {
-  display: none;
-}
-
-.busy {
-  font-weight: bold;
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.page-image {
-  margin-bottom: 2rem;
-  text-align: center;
-
-  img {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-.page-image__caption {
-  font-size: 1.1rem;
 }
 
 // HOME
@@ -283,8 +271,29 @@ main {
   }
 }
 
+.right-column hr:first-child {
+  @include media(large) {
+    display: none;
+  }
+}
+
 .home-hours {
   list-style-type: none;
+}
+
+.video-embed {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+
+.video-embed__iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 // MENU

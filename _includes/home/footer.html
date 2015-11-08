@@ -1,14 +1,14 @@
 <footer class="site-footer centered">
-  <a href="#">Back to the top &uarr;</a>
+  <a href="#" class="cta-button">Back to the top &uarr;</a>
 
   {% include components/facebook.html %}
-</footer>
 
-<div class="copyright" data-role="copyright">
-  &copy;
-  <script>
-    $(function() {
-      $('[data-role~=copyright]').append(strftime('%Y', new Date()));
-    });
-  </script>
-</div>
+  <div class="copyright" data-role="copyright">
+    &copy;
+    <script>
+      $(function() {
+        $('[data-role~=copyright]').append(strftime('%Y', new Date()));
+      });
+    </script>
+  </div>
+</footer>

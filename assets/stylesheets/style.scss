@@ -284,6 +284,10 @@ main {
 }
 
 // MENU
+.menu__content {
+  margin-top: 4rem;
+}
+
 .menu__section {
   max-width: 60rem;
   margin: 0 auto 2rem;
@@ -313,6 +317,7 @@ main {
 }
 
 .menu__heading {
+  text-align: center;
   padding-bottom: 0.3em;
   margin-bottom: 1rem;
   border-bottom: 1px solid rgba(0,0,0,0.2);

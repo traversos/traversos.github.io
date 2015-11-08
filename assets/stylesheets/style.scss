@@ -40,7 +40,7 @@ a {
 
 h1 {
   font: 1.9rem/1.2 $font-serif;
-  margin-bottom: 2rem;
+  margin-bottom: 1.8rem;
   font-weight: bold;
 
   @include media(small) {
@@ -189,6 +189,12 @@ ul, ol {
 
   @include media(medium) {
     font-size: 1.2rem;
+  }
+}
+
+.site-nav__item--hours {
+  @include media(large) {
+    display: none;
   }
 }
 

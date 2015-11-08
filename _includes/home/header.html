@@ -1,5 +1,6 @@
 {% assign active = page.url | downcase | split: '/' %}
 
+<a name="top"></a>
 <header class="header">
   <figure class="logo">
     <a href="/">
@@ -24,6 +25,12 @@
           <span class="site-nav-events__small">
             <span class="site-nav-link__primary">Events</span>
           </span>
+        </a>
+      </li>
+      <li class="site-nav__item site-nav__item--hours">
+        <a href="#hours">
+          <span class="site-nav-link__secondary">Open daily</span>
+          <span class="site-nav-link__primary">Hours</span>
         </a>
       </li>
       <li class="site-nav__item {% if active[1] == 'contact' %} active {% endif %}">

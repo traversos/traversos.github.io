@@ -28,7 +28,7 @@ body {
   text-align: center;
 
   @include media(small) {
-    font-size: 1.1rem;
+    font-size: 1.0rem;
   }
 }
 
@@ -44,7 +44,7 @@ h1 {
   font-weight: bold;
 
   @include media(small) {
-    font-size: 1.7rem;
+    font-size: 1.6rem;
     margin-bottom: 1.5rem;
     text-align: center;
   }
@@ -57,7 +57,7 @@ h2 {
   font-weight: bold;
 
   @include media(small) {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
   }
 }
 
@@ -72,6 +72,10 @@ h4 {
   font: 1.1rem/1.2 $font-sans;
   font-weight: bold;
   text-transform: uppercase;
+
+  @include media(small) {
+    font-size: 1rem;
+  }
 }
 
 hr {
@@ -261,6 +265,12 @@ main {
   text-align: center;
 }
 
+.hide-on-mobile {
+  @include media(small) {
+    display: none;
+  }
+}
+
 // HOME
 .main-column,
 .right-column {
@@ -313,6 +323,10 @@ main {
 
   p, table {
     font-size: 1.1rem;
+
+    @include media(small) {
+      font-size: 1rem;
+    }
   }
 
   th, td {
@@ -352,10 +366,23 @@ main {
 
 .menu__item--table {
   width: 100%;
+  max-width: 100%;
+
+  th, td {
+    @include media(small) {
+      font-size: 0.8rem;
+    }
+  }
 
   p {
     font-size: 0.8rem;
+    line-height: 1.2;
     margin-bottom: 0;
+
+    @include media(small) {
+      font-size: 0.6rem;
+      margin-left: 0;
+    }
   }
 }
 
@@ -374,6 +401,11 @@ main {
   p {
     margin-bottom: 0;
     font-size: 1.1rem;
+
+    @include media(small) {
+      font-size: 1rem;
+      line-height: 1.2;
+    }
   }
 }
 
@@ -412,8 +444,8 @@ main {
   font-family: $font-sans;
 }
 
-// ABOUT
-.about {
+// MAX-WIDTH/TEXTUAL PAGES
+.page-content--max-width {
   max-width: 50rem;
   margin: 0 auto;
 }

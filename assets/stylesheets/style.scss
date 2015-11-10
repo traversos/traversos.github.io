@@ -369,6 +369,9 @@ main {
   max-width: 100%;
 
   th, td {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+
     @include media(small) {
       font-size: 0.8rem;
     }

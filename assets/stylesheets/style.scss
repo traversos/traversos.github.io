@@ -238,6 +238,12 @@ main {
   @include clearfix;
   display: block;
   padding: 2rem 0;
+  font-family: $font-sans;
+
+  .facebook {
+    color: $color-white-text;
+    font-size: 1rem;
+  }
 
   @include media(medium) {
     padding: 2rem 6rem 2rem;
@@ -258,7 +264,6 @@ main {
 /* site nav in footer */
 .site-nav--small {
   display: block;
-  margin-bottom: 1rem;
 
   .site-nav__item {
     @include media(medium) {
@@ -278,9 +283,9 @@ main {
 }
 
 .copyright {
-  font: 1rem / 1.2 $font-sans;
-  margin: 0.75rem 0 0;
-  color: white;
+  font: 0.75rem / 1.2 $font-sans;
+  margin: 2rem 0 0;
+  color: $color-white-text;
 }
 
 // UTLITY CLASSES

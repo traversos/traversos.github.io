@@ -46,13 +46,16 @@
   <aside class="right-col">
     {% include components/facebook.html %}
 
-    <div class="copyright" data-role="copyright">
-      &copy;
-      <script>
-        $(function() {
-          $('[data-role~=copyright]').append(strftime('%Y', new Date()));
-        });
-      </script>
+    <div class="copyright">
+      <span data-role="copyright">
+        &copy;
+        <script>
+          $(function() {
+            $('[data-role~=copyright]').append(strftime('%Y', new Date()));
+          });
+        </script>
+      </span>
+      Traverso’s Restaurant
     </div>
   </aside>
 </footer>

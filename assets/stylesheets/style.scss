@@ -255,7 +255,7 @@ main {
   display: inline-block;
   width: 2rem;
   height: 2rem;
-  padding: 1rem;
+  padding: 0.75rem;
   margin-bottom: 1rem;
   border-radius: 5rem;
   font-size: 1.7rem;
@@ -284,7 +284,7 @@ main {
 
 .copyright {
   font: 0.75rem / 1.2 $font-sans;
-  margin: 2rem 0 0;
+  margin: 3rem 0 0;
   color: $color-white-text;
 }
 

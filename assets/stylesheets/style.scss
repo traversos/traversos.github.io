@@ -371,7 +371,7 @@ main {
 
   th, td {
     padding-right: 1rem;
-    border-bottom: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(0,0,0,0.07);
   }
 }
 
@@ -450,6 +450,12 @@ main {
       line-height: 1.2;
     }
   }
+}
+
+// PARTY PACKAGES
+.menu__item--packages th {
+  width: 30%;
+  text-align: right;
 }
 
 // CONTACT PAGE

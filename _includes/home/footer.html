@@ -1,14 +1,58 @@
-<footer class="site-footer centered">
-  <a href="#top" class="cta-button cta-button--back-up">Back to the top &uarr;</a>
+<footer class="site-footer">
+  <a href="#top">
+    <div class="up-arrow">&uarr;</div>
+  </a>
 
-  {% include components/facebook.html %}
+  <nav class="site-nav site-nav--small">
+    <ul class="site-nav-items">
+      <li class="site-nav__item">
+        <a href="/">
+          <span class="site-nav-link__primary">Home</span>
+        </a>
+      </li>
+      <li class="site-nav__item">
+        <a href="/menu/">
+          <span class="site-nav-link__primary"><span class="hide-on-mobile">Our </span>Menu</span>
+        </a>
+      </li>
+      <li class="site-nav__item">
+        <a href="/events/">
+          <span class="site-nav-events__big">
+            <span class="site-nav-link__primary">Catering &amp; Parties</span>
+          </span>
+          <span class="site-nav-events__small">
+            <span class="site-nav-link__primary">Events</span>
+          </span>
+        </a>
+      </li>
+      <li class="site-nav__item site-nav__item--hours">
+        <a href="/#hours">
+          <span class="site-nav-link__primary">Hours</span>
+        </a>
+      </li>
+      <li class="site-nav__item">
+        <a href="/contact/">
+          <span class="site-nav-link__primary">Contact</span>
+        </a>
+      </li>
+      <li class="site-nav__item">
+        <a href="/about/">
+          <span class="site-nav-link__primary">About</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 
-  <div class="copyright" data-role="copyright">
-    &copy;
-    <script>
-      $(function() {
-        $('[data-role~=copyright]').append(strftime('%Y', new Date()));
-      });
-    </script>
-  </div>
+  <aside class="right-col">
+    {% include components/facebook.html %}
+
+    <div class="copyright" data-role="copyright">
+      &copy;
+      <script>
+        $(function() {
+          $('[data-role~=copyright]').append(strftime('%Y', new Date()));
+        });
+      </script>
+    </div>
+  </aside>
 </footer>

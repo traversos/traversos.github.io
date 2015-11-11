@@ -235,11 +235,46 @@ main {
 }
 
 .site-footer {
-  position: relative;
+  @include clearfix;
   display: block;
-  padding: 2rem;
-  margin: 0 auto;
-  text-align: center;
+  padding: 2rem 0;
+
+  @include media(medium) {
+    padding: 2rem 6rem 2rem;
+  }
+}
+
+.up-arrow {
+  background: #fdd598;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5rem;
+  font-size: 1.7rem;
+}
+
+/* site nav in footer */
+.site-nav--small {
+  display: block;
+  margin-bottom: 1rem;
+
+  .site-nav__item {
+    @include media(medium) {
+      margin: 0 0 0 1rem;
+    }
+
+    &:first-child { margin-left: 0 !important; }
+  }
+
+  .site-nav-link__primary {
+    font-size: 0.8rem;
+
+    @include media(medium) {
+      font-size: 1rem;
+    }
+  }
 }
 
 .copyright {

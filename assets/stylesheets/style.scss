@@ -366,7 +366,13 @@ main {
 
 // MENU
 .menu__content {
-  margin-top: 4rem;
+  margin-top: 3rem;
+}
+
+.menu__header {
+  @include media(medium){
+    margin-top: 3rem;
+  }
 }
 
 .menu__section {
@@ -444,7 +450,8 @@ main {
 .menu__callout {
   border: 1px solid brown;
   padding: 1rem;
-  margin-bottom: 2rem;
+  margin: auto auto 2rem;
+  max-width: 60rem;
   text-align: center;
 
   h3 {

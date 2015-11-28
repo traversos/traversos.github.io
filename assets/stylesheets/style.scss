@@ -464,6 +464,12 @@ main {
   }
 }
 
+.menu__callout--promo {
+  @include media(medium) {
+    margin-top: -2rem;
+  }
+}
+
 // PARTY PACKAGES
 .menu__item--packages th {
   width: 30%;

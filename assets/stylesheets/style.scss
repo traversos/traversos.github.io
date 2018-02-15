@@ -369,12 +369,6 @@ main {
   margin-top: 3rem;
 }
 
-.menu__header {
-  @include media(medium){
-    margin-top: 3rem;
-  }
-}
-
 .menu__section {
   max-width: 60rem;
   margin: 0 auto 2rem;

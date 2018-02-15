@@ -526,3 +526,17 @@ textarea {
         -ms-text-size-adjust: 100%;
   }
 }
+
+// Print styles
+@media print {
+  .site-nav,
+  .page-nav,
+  .pdf-icon,
+  .site-footer { display: none; }
+
+  .header,
+  .home {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}

@@ -69,12 +69,10 @@ h3 {
 }
 
 h4 {
-  font: 1.1rem/1.2 $font-sans;
   font-weight: bold;
-  text-transform: uppercase;
 
   @include media(small) {
-    font-size: 1rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -296,7 +294,7 @@ main {
 }
 
 .flush--bottom {
-  margin-bottom: 0;
+  margin-bottom: 0 !important;
 }
 
 .push {
@@ -305,6 +303,10 @@ main {
 
 .push-half--bottom {
   margin-bottom: 0.4rem !important;
+}
+
+.push--left {
+  margin-left: 1.5rem;
 }
 
 .centered {
@@ -316,6 +318,8 @@ main {
     display: none;
   }
 }
+
+.sans { font: 1rem/1.2 $font-sans; }
 
 // HOME
 .main-column,
@@ -391,8 +395,7 @@ main {
   margin-bottom: 1rem;
 
   @include media(medium) {
-    display: inline-block;
-    width: 45%;
+    width: 50%;
     vertical-align: top;
 
     + .menu-column {
@@ -401,19 +404,80 @@ main {
   }
 }
 
+.menu__1up {
+  @include media(medium) {
+    padding: 0 2rem;
+  }
+}
+
+.menu__2up {
+  @include media(medium) {
+    display: flex;
+  }
+}
+
+.menu__4up {
+  @include media(medium) {
+    display: flex;
+  }
+}
+
+.menu__4up-column {
+  text-align: center;
+
+  @include media(medium) {
+    width: 25%;
+    margin-right: 2rem;
+
+    &:last-child { margin-right: 0; }
+  }
+
+  .menu__item-price { text-align: center; }
+}
+
 .menu__heading {
+  font-size: 1.8rem;
+  position: relative;
   text-align: center;
   padding-bottom: 0.3em;
   margin-bottom: 1rem;
-  border-bottom: 1px solid rgba(0,0,0,0.2);
+
+  &:after {
+    content: ' ';
+    display: block;
+    top: 40%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    border-bottom: 5px solid rgba(0,0,0,0.2);
+  }
+}
+
+.menu__heading-title {
+  position: relative;
+  z-index: 1;
+  padding: 0 1rem;
+  background: $color-background;
 }
 
 .menu__item {
   margin-bottom: 1rem;
 
   p {
-    margin-left: 1rem;
+    font: 1rem/1.2 $font-sans;
+    margin-bottom: 0;
   }
+}
+
+.menu__item-title {
+  display: flex;
+}
+
+.menu__item-price {
+  font-family: $font-serif !important;
+  font-weight: bold !important;
+  flex: 1;
+  text-align: right;
 }
 
 .menu__item--table {

@@ -379,6 +379,17 @@ main {
   margin-top: 3rem;
 }
 
+.menu__grid {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  justify-items: stretch;
+  align-items: stretch;
+
+  .menu__section { width: 100%; }
+}
+
 .menu__section {
   max-width: 60rem;
   margin: 0 auto 2rem;

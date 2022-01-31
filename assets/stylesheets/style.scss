@@ -92,6 +92,13 @@ ul, ol {
   margin-bottom: 1.6rem;
 }
 
+.pdf {
+  padding-left: 1.5rem;
+  background: url("/assets/images/pdf-icon@2x.png") no-repeat;
+  background-size: 1.25rem;
+  background-position: center left;
+}
+
 // SITE LAYOUT
 .header {
   @include clearfix;
@@ -316,6 +323,12 @@ main {
 .hide-on-mobile {
   @include media(small) {
     display: none;
+  }
+}
+
+.wrap-on-desktop {
+  @include media(medium) {
+    display: block;
   }
 }
 

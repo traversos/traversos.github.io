@@ -104,6 +104,10 @@ ul, ol {
   @include clearfix;
   padding: 1.5rem 0;
   border-bottom: 0px solid #548e76;
+
+  .has-banner & {
+    padding-top: 3.5rem;
+  }
 }
 
 .logo {
@@ -293,6 +297,18 @@ main {
   font: 0.75rem / 1.2 $font-sans;
   margin: 3rem 0 0;
   color: $color-white-text;
+}
+
+.banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2.25rem;
+  line-height: 2.25rem;
+  background: $color-yellow;
+  font-style: italic;
+  font-size: 1.2rem;
 }
 
 // UTLITY CLASSES

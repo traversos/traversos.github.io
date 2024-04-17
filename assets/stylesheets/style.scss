@@ -224,8 +224,10 @@ ul, ol {
 }
 
 .byline {
-  font-size: 1.2rem;
-  line-height: 1.3;
+  @include media(medium) {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
 }
 
 main {

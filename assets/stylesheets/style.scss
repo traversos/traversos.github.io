@@ -533,6 +533,17 @@ main {
   text-align: right;
 }
 
+.menu__2up p.push-half--bottom {
+  position: relative;
+  padding-right: 4em;
+
+  .menu__item-price {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}
+
 .menu__item--table {
   width: 100%;
   max-width: 100%;
